@@ -8,7 +8,7 @@ dotenv.config({ path: "./config.env" });
 
 app.use(express.json());
 
-app.use("/", authhandler);
+app.use("/api", authhandler);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
